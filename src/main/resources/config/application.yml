@@ -1,9 +1,5 @@
 spring:
   profiles:
     active: dev
-
-book:
- name: 書名config
- isbn: ${random.uuid}
- author: 作家config
- description: ${book.name}很不錯
+  thymeleaf:
+    mode: HTML
