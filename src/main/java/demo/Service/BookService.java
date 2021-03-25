@@ -3,6 +3,8 @@ package demo.Service;
 import java.util.List;
 import java.util.Optional;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -42,5 +44,10 @@ public class BookService {
 	
 	public List<Book> findByJPql(int len){
 		return bookRepository.findByJPql(len);
+	}
+	
+	@Transactional
+	public int updateByJPql(int status,long id){
+		return bookRepository.updateByJPql(status,id);
 	}
 }
