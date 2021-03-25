@@ -1,14 +1,7 @@
-server:
-  port: 9100
-  servlet:
-    context-path: /api
+spring:
+  profiles:
+    active: dev
 
-logging:
-  level:
-    root: warn
-    demo: debug
-  file: logs/my.log
-  
 book:
  name: 書名config
  isbn: ${random.uuid}

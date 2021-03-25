@@ -1,0 +1,10 @@
+server:
+  port: 8100
+  servlet:
+    context-path: /api
+
+logging:
+  level:
+    root: warn
+    demo: warn
+  file: logs/my.log
