@@ -7,4 +7,19 @@ logging:
   level:
     root: warn
     demo: debug
-  file: logs/my.log 
+  file: logs/my.log
+#db-oracle.datasource.url=jdbc:oracle:thin:@//localhost:1521/sid
+#db-oracle.datasource.jdbcUrl=jdbc:oracle:thin:@//localhost:1521/sid
+#db-oracle.datasource.username=oracleUser
+#db-oracle.datasource.password=userPassword
+#db-oracle.datasource.driver-class-name=oracle.jdbc.OracleDriver  
+spring:
+  datasource:
+   url: jdbc:oracle:thin:@//localhost:1521/XEPDB1
+   username: yuki
+   password: yuki
+   driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

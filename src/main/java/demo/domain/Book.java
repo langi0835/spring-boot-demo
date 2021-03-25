@@ -1,32 +1,44 @@
 package demo.domain;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-@Component
-@ConfigurationProperties(prefix="book")
+@Entity
 public class Book {
 
-	String name;
-	String isbn;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	long id;
+	int status;
+	String name;	
 	String author;
 	String description;
 	
 	public Book() {
 		
 	}
-	
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public int getStatus() {
+		return status;
+	}
+
+	public void setStatus(int status) {
+		this.status = status;
+	}	
 	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
-	public String getIsbn() {
-		return isbn;
-	}
-	public void setIsbn(String isbn) {
-		this.isbn = isbn;
 	}
 	public String getAuthor() {
 		return author;
