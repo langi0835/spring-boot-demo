@@ -1,0 +1,16 @@
+server:
+  port: 9100
+  servlet:
+    context-path: /api
+
+logging:
+  level:
+    root: warn
+    demo: debug
+  file: logs/my.log
+  
+book:
+ name: 書名config
+ isbn: ${random.uuid}
+ author: 作家config
+ description: ${book.name}很不錯
